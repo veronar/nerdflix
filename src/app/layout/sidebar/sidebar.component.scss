@@ -7,25 +7,46 @@ h1 {
 	font-weight: 400;
 }
 
-input {
+input, select, input:focus {
 	border-color: #2E2E2E;
+	background-color: black;
 }
 
 a {
 	transform: translateX(-40px);
 }
 
-.form-control {
-	display: inline-block;
+.container {
+	overflow-x: hidden;
 }
 
 .inputfields {
+	display: block;
 	position: absolute;
 	width: 100%;
 	transform: translateY(20px);
 
-	.rating {
-		right: 20px;
+	span {
+		color: #FFFFFF;
+		position: absolute;
+		opacity: 50%;
+		transform: translateY(-30px);
+		width: 100px;
 	}
+
+	.rating {
+		float: right;
+		transform: translateY(-38px);
+
+		input {
+			color: #FFFFFF;
+			border-color: #2E2E2E;
+		}
+	}
+}
+
+select {
+	color: #FFFFFF;
+	border-color: #2E2E2E;
 }
 

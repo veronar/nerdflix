@@ -1,0 +1,27 @@
+.card {
+	border: 0px;
+	border-radius: 0px;
+	padding: 2px 2px;
+	background-color: #1D1D1D;
+	margin: 10px 0;
+
+	h6 {
+		font-size: smaller;
+	}
+
+	img {
+		border-radius: 6px;
+	}
+
+	img:hover {
+		opacity: 0.5;
+
+	}
+}
+
+h2 {
+	position: absolute;
+	font-weight: 300;
+	transform: translateX(50vh);
+}
+

@@ -6,17 +6,21 @@
 
 			<div class="col-md-3 search">
 				<div class="d-flex">
-					<input class="form-control me-2 bg-dark" type="search" placeholder="Search for a title" aria-label="Search">
+					<input class="form-control me-2" type="search" placeholder="Search for a title" aria-label="Search">
 					<a class="mt-2" type="submit"> <i class="bi bi-search"></i> </a>
 				</div>
 			</div>
 
 			<div class="col-md-6 row rating">
+				<span>Sort by</span>
 				<div class="col-md-3">
-					<input class="form-control bg-dark" type="number" placeholder="Title (A-Z)">
+					<select class="form-select " placeholder="Title (A-Z)" id="">
+						<option value="asc">(A-Z)</option>
+						<option value="desc">(Z-A)</option>
+					</select>
 				</div>
 				<div class="col-md-3">
-					<input class="form-control bg-dark" type="number" placeholder="Title (A-Z)">
+					<input class="form-control" min="0" max="10" type="number" placeholder="Rating">
 				</div>
 			</div>
 

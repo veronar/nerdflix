@@ -8,11 +8,17 @@ body, html {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
-p, h1, h2, h3, h4, h5 {
+p, h1, h2, h3, h4, h5, h6 {
 	color: #FFFFFF;
 }
 
 a {
 	text-decoration: none;
 	color: #FFFFFF !important;
+}
+
+.main-wrapper {
+	margin-top: 50px;
+	position: relative;
+	overflow-x: hidden;
 }

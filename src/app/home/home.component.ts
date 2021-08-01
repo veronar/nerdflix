@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as movieData from '../../model/imdb-top-50.json' ;
+import { Movie } from 'src/shared/types/movie';
+import { default as movieData } from '../../model/imdb-top-50.json' ;
 
 @Component({
   selector: 'app-home',
@@ -7,12 +8,12 @@ import * as movieData from '../../model/imdb-top-50.json' ;
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-	movieData = movieData;
+	movieList!: Movie[];
 
   constructor() { }
 
   ngOnInit() {
-		console.log(movieData);
+		this.movieList = movieData.data.movies;
   }
 
 }

@@ -1,8 +1,3 @@
-<!-- <div class="container"> -->
-<p>
-	home works!
-</p>
-<app-dropdown></app-dropdown>
-<app-hover></app-hover>
-<app-like></app-like>
-<!-- </div> -->
+<div class="row row-cols-1 row-cols-md-6 g-4">
+	<app-movie-card *ngFor="let movie of movieList" [movie]="movie"></app-movie-card>
+</div>
