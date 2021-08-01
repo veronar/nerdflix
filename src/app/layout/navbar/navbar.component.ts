@@ -1,5 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+import { Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { MoviesService } from 'src/shared/services/movies.service';
 
 @Component({
@@ -9,20 +9,15 @@ import { MoviesService } from 'src/shared/services/movies.service';
 })
 export class NavbarComponent implements OnInit, OnDestroy {
 	totalLikes = new Observable<number>();
-	subscriptions = new Subscription();
+	likes: any;
 
   constructor(private movieService: MoviesService) { }
 
   ngOnInit() {
-		// this.subscriptions.add(this.movieService.getLikes().subscribe((likes) => {
-		// 	this.totalLikes = likes;
-		// 	console.log(this.totalLikes);
-		// }));
 		this.totalLikes = this.movieService.getLikes();
   }
 
 	ngOnDestroy() {
-		this.subscriptions.unsubscribe()
 	}
 
 }

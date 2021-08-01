@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject }from 'rxjs';
 import { default as movieData } from '../../model/imdb-top-50.json' ;
 import { Movie } from '../types/movie';
 
@@ -27,12 +27,13 @@ export class MoviesService {
 		this.countLikes();
 	}
 
-	countLikes() {
+	async countLikes() {
 		let count = 0;
-		for(const movie of this.movieList) {
-			count = movie.like === true ? count++ : count;
-		}
+		this.movieList.forEach((movie) => {
+			if (movie.like === true) count++;
+		})
 		this.totalLikes.next(count);
+
 	}
 
 	getLikes() {
