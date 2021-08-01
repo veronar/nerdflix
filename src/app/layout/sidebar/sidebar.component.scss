@@ -1,0 +1,31 @@
+.container-fluid {
+	background: #171717;
+	padding: 40px 0;
+}
+
+h1 {
+	font-weight: 400;
+}
+
+input {
+	border-color: #2E2E2E;
+}
+
+a {
+	transform: translateX(-40px);
+}
+
+.form-control {
+	display: inline-block;
+}
+
+.inputfields {
+	position: absolute;
+	width: 100%;
+	transform: translateY(20px);
+
+	.rating {
+		right: 20px;
+	}
+}
+
