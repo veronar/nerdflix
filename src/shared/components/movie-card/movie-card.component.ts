@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-movie-card',
@@ -7,11 +7,17 @@ import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 })
 export class MovieCardComponent implements OnInit {
 	@Input() movie: any;
+	@Output() liked = new EventEmitter<string>();
 
   constructor() {
 	}
 
   ngOnInit() {
   }
+
+	changeLike() {
+		this.liked.emit(this.movie.idIMDB);
+		// this.movie.like = !this.movie.like;
+	}
 
 }

@@ -20,4 +20,5 @@ export interface Movie {
 	votes: string;
 	type: string;
 	ranking: number;
+	like?: boolean;
 }

@@ -14,13 +14,15 @@
 			<div class="col-md-6 row rating">
 				<span>Sort by</span>
 				<div class="col-md-3">
-					<select class="form-select " placeholder="Title (A-Z)" id="">
+					<select class="form-select" (change)="sortByTitle(sortTitle.value)" #sortTitle placeholder="Title (A-Z)"
+						id="">
 						<option value="asc">(A-Z)</option>
 						<option value="desc">(Z-A)</option>
 					</select>
 				</div>
 				<div class="col-md-3">
-					<input class="form-control" min="0" max="10" type="number" placeholder="Rating">
+					<input class="form-control" min="0" max="10" #sortRating (change)="sortByRating(sortRating.value)"
+						type="number" placeholder="Rating">
 				</div>
 			</div>
 

@@ -2,7 +2,13 @@
 	<div class="card">
 
 		<div class="rating d-flex justify-content-center">
-			<h2 class="">{{movie.rating}}</h2>
+			<span class="pull-right" (click)="changeLike()" *ngIf="!movie.like">
+				<i class="bi bi-star"></i>
+			</span>
+			<span class="pull-right" (click)="changeLike()" *ngIf="movie.like">
+				<i class="bi bi-star-fill"></i>
+			</span>
+			<h2 class="mt-5">{{movie.rating}}</h2>
 		</div>
 
 		<img class="image-hover" [src]="movie.urlPoster || 'assets/no_image_available.svg'" class="card-img-top" alt="">
